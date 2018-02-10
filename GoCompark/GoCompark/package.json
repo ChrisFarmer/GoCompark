@@ -1,0 +1,23 @@
+{
+  "name": "gocompark",
+  "version": "1.0.0",
+  "description": "Allows GoCompare staff to book car parking spaces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisFarmer/GoCompark.git"
+  },
+  "author": "Chris Farmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisFarmer/GoCompark/issues"
+  },
+  "homepage": "https://github.com/ChrisFarmer/GoCompark#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1"
+  }
+}

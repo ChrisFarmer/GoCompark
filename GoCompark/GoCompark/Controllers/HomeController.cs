@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Domain;
 
 namespace GoCompark.Controllers
 {
@@ -7,6 +8,12 @@ namespace GoCompark.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(Booking booking)
+        {
+            return null;
         }
     }
 }

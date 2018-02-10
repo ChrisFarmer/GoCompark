@@ -10,3 +10,7 @@
 /GoCompark/packages/Microsoft.AspNet.Mvc.5.2.3
 /GoCompark/packages
 *.user
+/GoCompark/Domain/obj/Debug
+/GoCompark/Domain/bin/Debug
+/GoCompark/GoCompark/node_modules
+/GoCompark/GoCompark/package-lock.json
