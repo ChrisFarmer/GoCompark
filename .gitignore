@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/GoCompark/.vs
+/GoCompark/GoCompark/bin
+/GoCompark/GoCompark/obj/Debug
+/GoCompark/GoCompark.Tests/bin/Debug
+/GoCompark/GoCompark.Tests/obj/Debug
+/GoCompark/packages/Microsoft.AspNet.Mvc.5.2.3
+/GoCompark/packages
