@@ -9,3 +9,4 @@
 /GoCompark/GoCompark.Tests/obj/Debug
 /GoCompark/packages/Microsoft.AspNet.Mvc.5.2.3
 /GoCompark/packages
+*.user
