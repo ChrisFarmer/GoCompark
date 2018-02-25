@@ -13,7 +13,7 @@ namespace GoCompark.Controllers
         [HttpPost]
         public ActionResult Index(Booking booking)
         {
-            return null;
+            return Index();
         }
     }
 }

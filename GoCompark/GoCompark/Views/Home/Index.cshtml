@@ -4,20 +4,41 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<div>
-    <h4>Date(s)</h4>
-    <div>
-        @Html.LabelFor(m => m.StartDate)
-        @Html.TextBoxFor(m => m.StartDate)
-    </div>
-    <div>
-        @Html.LabelFor(m => m.EndDate)
-        @Html.TextBoxFor(m => m.EndDate)
-    </div>
-    <div>
-        @Html.LabelFor(m => m.IncludesMorning)
-        @Html.CheckBoxFor(m => m.IncludesMorning)
-        @Html.LabelFor(m => m.IncludesAfternoon)
-        @Html.CheckBoxFor(m => m.IncludesAfternoon)
-    </div>
-</div>
+@using (Html.BeginForm())
+{
+    <h3>Check Availability</h3>
+
+    <fieldset>
+        <legend>From</legend>
+
+        <div>
+            @Html.TextBoxFor(m => m.From.Date, new { id = "from-date", maxlength = "10" })
+            @Html.ValidationMessageFor(m => m.From.Date)
+        </div>
+        <div>
+            @Html.RadioButtonFor(m => m.From.PartOfDay, "Morning", new { id = "from-morning" })
+            @Html.Label("from-morning", "Morning")
+            @Html.RadioButtonFor(m => m.From.PartOfDay, "Afternoon", new { id = "from-afernoon" })
+            @Html.Label("from-afernoon", "Afternoon")
+            @Html.ValidationMessageFor(m => m.From.PartOfDay)
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>To</legend>
+
+        <div>
+            @Html.TextBoxFor(m => m.To.Date, new { id = "to-date", maxlength = "10" })
+            @Html.ValidationMessageFor(m => m.To.Date)
+        </div>
+        <div>
+            @Html.RadioButtonFor(m => m.To.PartOfDay, "Morning", new { id = "to-morning" })
+            @Html.Label("to-morning", "Morning")
+            @Html.RadioButtonFor(m => m.To.PartOfDay, "Afternoon", new { id = "to-afernoon" })
+            @Html.Label("to-afernoon", "Afternoon")
+            @Html.ValidationMessageFor(m => m.To.PartOfDay)
+        </div>
+    </fieldset>
+
+    <input type="submit" value="Save"/>
+}

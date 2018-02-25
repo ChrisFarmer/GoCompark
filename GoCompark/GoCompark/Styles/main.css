@@ -1,0 +1,11 @@
+﻿hidden {
+    display: none;
+}
+
+fieldset div {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 5px;
+}

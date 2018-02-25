@@ -1,16 +1,24 @@
 ﻿using System;
-using Domain.Enums;
 
 namespace Domain
 {
     public class Booking
     {
-        public DateTime StartDate { get; set; }
+        public Booking()
+        {
+            var tomorrow = DateTime.Now.AddDays(1).Date;
+            From = new TimeSlot { Date = tomorrow };
+            To = new TimeSlot { Date = tomorrow };
+        }
 
-        public DateTime EndDate { get; set; }
+        public int Id { get; set; }
 
-        public bool IncludesMorning { get; set; }
+        public Employee Booker { get; set; }
 
-        public bool IncludesAfternoon { get; set; }
+        public ParkingSpace ParkingSpace { get; set; }
+
+        public TimeSlot From { get; set; }
+
+        public TimeSlot To { get; set; }
     }
 }
